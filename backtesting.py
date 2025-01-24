@@ -1,5 +1,15 @@
 import pandas as pd
 import numpy as np
+import defs 
+import requests
+
+session = requests.Session()
+
+instrument = "EUR_USD"
+count = 10
+granularity = "H1"
+
+url = f"{defs.OANDA_URL}/instruments/{instrument}/candles?count={count}&granularity={granularity}"
 
 
 
